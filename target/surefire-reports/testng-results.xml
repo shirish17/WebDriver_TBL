@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="58407" started-at="2021-05-19T05:20:14Z" finished-at="2021-05-19T05:21:12Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.SPERunner.SPERunnerTest@31ef45e3]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="ChromeTest" duration-ms="58407" started-at="2021-05-19T05:20:14Z" finished-at="2021-05-19T05:21:12Z">
+      <class name="com.SPERunner.SPERunnerTest">
+        <test-method status="PASS" signature="parameterTest(java.lang.String)[pri:0, instance:com.SPERunner.SPERunnerTest@31ef45e3]" name="parameterTest" is-config="true" duration-ms="9244" started-at="2021-05-19T05:20:14Z" finished-at="2021-05-19T05:20:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- parameterTest -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.SPERunner.SPERunnerTest@31ef45e3]" name="setUpClass" is-config="true" duration-ms="466" started-at="2021-05-19T05:20:23Z" finished-at="2021-05-19T05:20:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.SPERunner.SPERunnerTest@31ef45e3]" name="feature" duration-ms="46292" started-at="2021-05-19T05:20:24Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2021-05-19T05:21:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TBL Product & SKU download]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:com.SPERunner.SPERunnerTest@31ef45e3]" name="closeDriver" is-config="true" duration-ms="2199" started-at="2021-05-19T05:21:10Z" finished-at="2021-05-19T05:21:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.SPERunner.SPERunnerTest@31ef45e3]" name="tearDownClass" is-config="true" duration-ms="18" started-at="2021-05-19T05:21:12Z" finished-at="2021-05-19T05:21:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.SPERunner.SPERunnerTest -->
+    </test> <!-- ChromeTest -->
+  </suite> <!-- Suite -->
+</testng-results>

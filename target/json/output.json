@@ -1,0 +1,112 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 290897000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GivenStepDefinition.setup()"
+            }
+          },
+          {
+            "result": {
+              "duration": 332000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "WhenStepDefinition.setup()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "",
+        "description": "Lazada user is able to download TBL product and SKU details",
+        "id": "tbl-product-\u0026-sku-download;;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 200000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GivenStepDefinition.endScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1012214500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Customer opens the homepage for the \"https://sellercenter.lazada.sg/apps/seller/login\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://sellercenter.lazada.sg/apps/seller/login",
+                  "offset": 37
+                }
+              ],
+              "location": "GivenStepDefinition.Open_homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 44830415700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Customer login to system by providing \"amitrs@specom.io\" and \"Singpost123456\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "amitrs@specom.io",
+                  "offset": 39
+                },
+                {
+                  "val": "Singpost123456",
+                  "offset": 62
+                }
+              ],
+              "location": "WhenStepDefinition.customer_login_by_providing_email_password(String,String)"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Orders"
+          }
+        ]
+      }
+    ],
+    "name": "TBL Product \u0026 SKU download",
+    "description": "",
+    "id": "tbl-product-\u0026-sku-download",
+    "keyword": "Feature",
+    "uri": "Orders.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Orders"
+      }
+    ]
+  }
+]
