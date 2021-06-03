@@ -28,8 +28,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="var" path="M2_REPO"/>
-	<classpathentry kind="lib" path="C:/Users/shirish/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="src" path="mainjavaclass"/>
+	<classpathentry kind="lib" path="C:/Users/shiri/Downloads/htmlunit-driver-2.50.0-jar-with-dependencies.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -25,6 +25,7 @@
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>3.141.59</version>
+			
 		</dependency>
 
 		<dependency>
@@ -54,12 +55,12 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-remote-driver</artifactId>
-			<version>3.141.59</version>
+			 <version>3.141.59</version>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-server</artifactId>
-			<version>3.141.59</version>
+			<artifactId>selenium-server</artifactId>			
+			<version>3.141.59</version> 
 		</dependency>
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -99,7 +100,10 @@
 			<artifactId>java-client</artifactId>
 			<version>6.1.0</version>
 		</dependency>
-	      
+		
+
+
+	
 	</dependencies>
 
 	<build>

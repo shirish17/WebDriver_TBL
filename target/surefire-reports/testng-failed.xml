@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]" parallel="methods">
-  <test thread-count="5" verbose="0" name="ChromeTest(failed)" parallel="methods">
-    <parameter name="browser" value="chrome"/>
+  <test thread-count="5" verbose="0" name="HTMLUnitTest(failed)" parallel="methods">
+    <parameter name="browser" value="htmlunit"/>
     <classes>
       <class name="com.SPERunner.SPERunnerTest">
         <methods>
           <include name="setUpClass"/>
           <include name="parameterTest"/>
           <include name="closeDriver"/>
-          <include name="feature" invocation-numbers="0"/>
+          <include name="feature"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.SPERunner.SPERunnerTest -->
     </classes>
-  </test> <!-- ChromeTest(failed) -->
+  </test> <!-- HTMLUnitTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

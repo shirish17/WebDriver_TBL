@@ -3,12 +3,15 @@ package com.SPERunner;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -65,16 +68,15 @@ public class SPERunnerTest extends AbstractTestNGCucumberTests
 			ChromeOptions options = new ChromeOptions();			
 			options.setExperimentalOption("prefs", chromePrefs);
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
-			cap.setCapability(ChromeOptions.CAPABILITY, options);
-			driver = new ChromeDriver(cap);
-			//============
+			cap.setCapability(ChromeOptions.CAPABILITY, options);			
+			driver = new ChromeDriver(cap);			
 		} else if (browser.equalsIgnoreCase("InternetExplorer")) {
 			System.setProperty("webdriver.ie.driver", (System.getProperty("user.dir") + fsep + "src" + fsep + "test"
 					+ fsep + "resources" + fsep + "browserDrivers" + fsep + "IEDriverServer.exe"));
 
 			driver = new InternetExplorerDriver();
 
-		}
+		}		
 		else // if nothing set then open chrome
 		{
 			System.setProperty("webdriver.chrome.driver", (System.getProperty("user.dir") + fsep + "src" + fsep + "test"
