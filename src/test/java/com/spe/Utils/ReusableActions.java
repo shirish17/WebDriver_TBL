@@ -30,7 +30,7 @@ public class ReusableActions extends SPEMasterPage
 	SPERunnerTest sperunnertest;
 	SPEPageGenerator pageGenerator;
 	static LoggerActions logAction = new LoggerActions();
-	public static int timeoutsec=60;
+	public static int timeoutsec=40;
 	public static int polltime=3;
 	
 	public ReusableActions (WebDriver driver)
@@ -38,7 +38,7 @@ public class ReusableActions extends SPEMasterPage
 		super(driver);
 	}
 	
-	public static boolean waitForElementToBeVisible(WebDriver driver, WebElement element, String elementName)
+	public static boolean waitForElementToBeVisible(WebDriver driver, WebElement element, String elementName) throws TimeoutException
 	{
 		FluentWait<WebDriver> wait= new FluentWait<WebDriver>(driver);
 		wait.withTimeout(timeoutsec, TimeUnit.SECONDS);		
@@ -47,7 +47,7 @@ public class ReusableActions extends SPEMasterPage
 		wait.ignoring(NoSuchElementException.class);
 		return wait.until(new ExpectedCondition<Boolean>()
 			{
-			public Boolean apply(WebDriver driver)
+			public Boolean apply(WebDriver driver) 
 			{
 				try
 				{
@@ -55,11 +55,11 @@ public class ReusableActions extends SPEMasterPage
 				}
 				catch(NoSuchElementException e)
 				{
-					return true;
+					return false;
 				}
 				catch (StaleElementReferenceException e)
 				{
-					return true;
+					return false;
 				}
 				catch (Exception exception)
 				{

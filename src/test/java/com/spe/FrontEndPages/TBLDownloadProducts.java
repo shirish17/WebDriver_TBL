@@ -1,5 +1,8 @@
 package com.spe.FrontEndPages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +11,8 @@ import org.openqa.selenium.support.How;
 import com.SPERunner.SPERunnerTest;
 import com.spe.Utils.ReusableActions;
 import com.spe.master.pagecomponents.SPEMasterPage;
+
+import junit.framework.Assert;
 
 public class TBLDownloadProducts extends SPEMasterPage
 {
@@ -71,8 +76,12 @@ public class TBLDownloadProducts extends SPEMasterPage
 	@FindBy(how=How.XPATH,using="//i[@class='next-icon next-icon-arrow-left next-small layout-icon layout-icon-arrow-left']")
 	public WebElement arrow_SideBar;
 	
+	//Traffic popup	
+	@FindBy(how=How.CSS,using="div.baxia-dialog-close")
+	public WebElement iframe_Close;
+	
 	//=====================================================
-	public void download_Products_SKU_Details(String strEmail, String strPassword)
+	public void download_Products_SKU_Details(String strEmail, String strPassword) throws InterruptedException 
 	{
 		boolean blnStatus =false;
 		try
@@ -91,11 +100,73 @@ public class TBLDownloadProducts extends SPEMasterPage
 			{
 				Thread.sleep(5000);
 				ReusableActions.linkClick(driver, btn_PopupCloseBtn, "Popup close");
-			}
-			ReusableActions.waitForElementToBeVisible(driver, link_BusinessAdvisor, "Business Advisor link");
-			ReusableActions.linkClick(driver, link_BusinessAdvisor, "Business Advisor clicked");
+			}			
 			
-			Thread.sleep(2000);
+			try
+			{
+				Thread.sleep(2000);	
+				if(link_BusinessAdvisor.isDisplayed())
+				{
+					blnStatus=true;
+				}				
+			}
+			catch (NoSuchElementException noBA)
+			{
+				blnStatus=false;
+			}
+			catch (Exception excepBA)
+			{
+				blnStatus=false;			
+			}
+			Assert.assertTrue("Missing Business Advisor link on page", blnStatus);
+			ReusableActions.linkClick(driver, link_BusinessAdvisor, "Business Advisor clicked");			
+			
+			try
+			{
+				Thread.sleep(10000);
+				if(iframe_Close.isDisplayed())
+				{
+					blnStatus=true;
+				}
+				
+			}
+			catch (NoSuchElementException ne)
+			{
+				blnStatus=false;
+			}
+			catch (Exception excep)
+			{
+				blnStatus=false;			
+			}
+			if(blnStatus) 
+			{
+				ReusableActions.buttonClick(driver, iframe_Close, "close traffic popup");
+			}
+			
+			blnStatus=false;
+			try
+			{
+				Thread.sleep(2000);
+				if(iframe_Close.isDisplayed())
+				{
+					JavascriptExecutor js = (JavascriptExecutor) driver;
+					js.executeScript("arguments[0].click();", iframe_Close);
+				}
+				
+			}
+			catch (NoSuchElementException nsem)
+			{
+				blnStatus=false;
+			}
+			catch (Exception excp)
+			{
+				blnStatus=false;			
+			}
+			if(blnStatus) 
+			{
+				ReusableActions.buttonClick(driver, iframe_Close, "close traffic popup");
+			}
+			
 			ReusableActions.waitForElementToBeClickable(driver, link_Product, "Product link on Top");
 			ReusableActions.linkClick(driver, link_Product, "Product link clicked");
 			
@@ -110,7 +181,7 @@ public class TBLDownloadProducts extends SPEMasterPage
 			ReusableActions.waitForElementToBeClickable(driver, btn_Ok_onExportPopup, "Ok button on Export Pooup");
 			ReusableActions.linkClick(driver, btn_Ok_onExportPopup, "OK button clicked");
 			
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			ReusableActions.waitForElementToBeClickable(driver, radioBtn_SKU, "SKU radio button");
 			ReusableActions.linkClick(driver, radioBtn_SKU, "SKU radio button clicked");
 			

@@ -62,7 +62,7 @@ public class SPERunnerTest extends AbstractTestNGCucumberTests
 			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 			chromePrefs.put("profile.default_content_settings.popups", 0);
 			chromePrefs.put("download.default_directory", "D:\\Lazada");
-			ChromeOptions options = new ChromeOptions();
+			ChromeOptions options = new ChromeOptions();			
 			options.setExperimentalOption("prefs", chromePrefs);
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
 			cap.setCapability(ChromeOptions.CAPABILITY, options);

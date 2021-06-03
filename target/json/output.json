@@ -6,20 +6,20 @@
         "before": [
           {
             "result": {
-              "duration": 290897000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "GivenStepDefinition.setup()"
-            }
-          },
-          {
-            "result": {
-              "duration": 332000,
+              "duration": 159898200,
               "status": "passed"
             },
             "match": {
               "location": "WhenStepDefinition.setup()"
+            }
+          },
+          {
+            "result": {
+              "duration": 590000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GivenStepDefinition.setup()"
             }
           }
         ],
@@ -30,7 +30,7 @@
         "after": [
           {
             "result": {
-              "duration": 200000,
+              "duration": 240900,
               "status": "passed"
             },
             "match": {
@@ -43,7 +43,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1012214500,
+              "duration": 1574076000,
               "status": "passed"
             },
             "line": 7,
@@ -64,7 +64,7 @@
           },
           {
             "result": {
-              "duration": 44830415700,
+              "duration": 60973695800,
               "status": "passed"
             },
             "line": 8,
