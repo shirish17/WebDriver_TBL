@@ -2,11 +2,13 @@ package com.SPERunner;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.junit.runner.RunWith;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,6 +16,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
@@ -76,7 +79,38 @@ public class SPERunnerTest extends AbstractTestNGCucumberTests
 
 			driver = new InternetExplorerDriver();
 
-		}		
+		}
+		else if(browser.equalsIgnoreCase("remotedriver"))
+		{
+			/* This code is to run automation without defining the file location
+			DesiredCapabilities caps = new DesiredCapabilities();
+			caps.setBrowserName("chrome");
+			caps.setPlatform(Platform.WIN10);
+			
+			//Chorme Options implementation must from 3.8 onwards
+			ChromeOptions options = new ChromeOptions();
+			options.merge(caps);
+			*/
+			
+			//This code is to define a folder path to files to be download
+			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+			chromePrefs.put("profile.default_content_settings.popups", 0);
+			chromePrefs.put("download.default_directory", "D:\\Lazada");
+			ChromeOptions options = new ChromeOptions();			
+			options.setExperimentalOption("prefs", chromePrefs);
+			DesiredCapabilities cap = DesiredCapabilities.chrome();
+			cap.setBrowserName("chrome");
+			cap.setPlatform(Platform.WIN10);
+			cap.setCapability(ChromeOptions.CAPABILITY, options);
+			
+			
+			//Hub URL
+			URL url =new URL("http://192.168.0.100:4444/wd/hub");
+			
+			//must intitialize remote webdriver for grid
+			driver = new RemoteWebDriver(url,cap);
+			
+		}
 		else // if nothing set then open chrome
 		{
 			System.setProperty("webdriver.chrome.driver", (System.getProperty("user.dir") + fsep + "src" + fsep + "test"

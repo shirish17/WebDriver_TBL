@@ -58,11 +58,11 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 111389000,
+  "duration": 119106900,
   "status": "passed"
 });
 formatter.before({
-  "duration": 377800,
+  "duration": 423300,
   "status": "passed"
 });
 formatter.scenario({
@@ -106,7 +106,7 @@ formatter.match({
   "location": "GivenStepDefinition.Open_homepage(String)"
 });
 formatter.result({
-  "duration": 2020851000,
+  "duration": 2293698500,
   "status": "passed"
 });
 formatter.match({
@@ -123,11 +123,11 @@ formatter.match({
   "location": "WhenStepDefinition.customer_login_by_providing_email_password(String,String)"
 });
 formatter.result({
-  "duration": 53163491100,
+  "duration": 54669850100,
   "status": "passed"
 });
 formatter.after({
-  "duration": 179700,
+  "duration": 219600,
   "status": "passed"
 });
 });

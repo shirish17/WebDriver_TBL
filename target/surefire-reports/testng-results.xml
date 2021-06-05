@@ -2,30 +2,30 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="72398" started-at="2021-06-03T14:49:21Z" finished-at="2021-06-03T14:50:33Z">
+  <suite name="Suite" duration-ms="67620" started-at="2021-06-05T01:24:16Z" finished-at="2021-06-05T01:25:24Z">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.SPERunner.SPERunnerTest@57fffcd7]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="ChromeTest" duration-ms="72398" started-at="2021-06-03T14:49:21Z" finished-at="2021-06-03T14:50:33Z">
+    <test name="ChromeTest" duration-ms="67620" started-at="2021-06-05T01:24:16Z" finished-at="2021-06-05T01:25:24Z">
       <class name="com.SPERunner.SPERunnerTest">
-        <test-method status="PASS" signature="parameterTest(java.lang.String)[pri:0, instance:com.SPERunner.SPERunnerTest@57fffcd7]" name="parameterTest" is-config="true" duration-ms="14596" started-at="2021-06-03T14:49:21Z" finished-at="2021-06-03T14:49:35Z">
+        <test-method status="PASS" signature="parameterTest(java.lang.String)[pri:0, instance:com.SPERunner.SPERunnerTest@57fffcd7]" name="parameterTest" is-config="true" duration-ms="7826" started-at="2021-06-05T01:24:16Z" finished-at="2021-06-05T01:24:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[remotedriver]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- parameterTest -->
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.SPERunner.SPERunnerTest@57fffcd7]" name="setUpClass" is-config="true" duration-ms="337" started-at="2021-06-03T14:49:35Z" finished-at="2021-06-03T14:49:36Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.SPERunner.SPERunnerTest@57fffcd7]" name="setUpClass" is-config="true" duration-ms="400" started-at="2021-06-05T01:24:24Z" finished-at="2021-06-05T01:24:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.SPERunner.SPERunnerTest@57fffcd7]" name="feature" duration-ms="55444" started-at="2021-06-03T14:49:36Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2021-06-03T14:50:31Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.SPERunner.SPERunnerTest@57fffcd7]" name="feature" duration-ms="57228" started-at="2021-06-05T01:24:25Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2021-06-05T01:25:22Z">
           <params>
             <param index="0">
               <value>
@@ -36,11 +36,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="closeDriver()[pri:0, instance:com.SPERunner.SPERunnerTest@57fffcd7]" name="closeDriver" is-config="true" duration-ms="1845" started-at="2021-06-03T14:50:31Z" finished-at="2021-06-03T14:50:33Z">
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:com.SPERunner.SPERunnerTest@57fffcd7]" name="closeDriver" is-config="true" duration-ms="1962" started-at="2021-06-05T01:25:22Z" finished-at="2021-06-05T01:25:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.SPERunner.SPERunnerTest@57fffcd7]" name="tearDownClass" is-config="true" duration-ms="14" started-at="2021-06-03T14:50:33Z" finished-at="2021-06-03T14:50:33Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.SPERunner.SPERunnerTest@57fffcd7]" name="tearDownClass" is-config="true" duration-ms="20" started-at="2021-06-05T01:25:24Z" finished-at="2021-06-05T01:25:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
