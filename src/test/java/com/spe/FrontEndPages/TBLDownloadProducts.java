@@ -105,7 +105,6 @@ public class TBLDownloadProducts extends SPEMasterPage
 				blnStatus=false;			
 			}
 			Assert.assertTrue("Missing Email edit box on page", blnStatus);			
-			//ReusableActions.waitForElementToBeVisible(driver, input_Email, "Email field");
 			ReusableActions.inputText(driver, input_Email, strEmail, "Entered email");
 			
 			ReusableActions.waitForElementToBeVisible(driver, input_Password, "Password field");
@@ -141,7 +140,7 @@ public class TBLDownloadProducts extends SPEMasterPage
 			
 			try
 			{
-				Thread.sleep(10000);
+				//Thread.sleep(10000);
 				if(iframe_Close.isDisplayed())
 				{
 					blnStatus=true;

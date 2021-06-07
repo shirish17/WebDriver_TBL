@@ -1,6 +1,7 @@
 package com.SPERunner;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -42,6 +43,8 @@ public class GivenStepDefinition
 		if(!URL.isEmpty())
 		{
 			driver.get(URL);
+			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS); //maximum wait for page to fully load
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //maximum wait for page element to load
 		}
 		else
 		{
